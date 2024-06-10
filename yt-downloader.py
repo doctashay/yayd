@@ -18,7 +18,7 @@ def download_video():
     if not os.path.exists("ffmpeg.exe"):
         ffmpeg_url = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n5.1-latest-win64-gpl-5.1.zip"
         response = requests.get(ffmpeg_url)
-        with open("ffmpeg.zip", "wb") apythons file:
+        with open("ffmpeg.zip", "wb") as file:
             file.write(response.content)
         with zipfile.ZipFile("ffmpeg.zip", "r") as zip_ref:
             zip_ref.extractall(".")
